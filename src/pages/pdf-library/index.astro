@@ -1,0 +1,234 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="PDF Library" description="Direct links to every primary document referenced across this library.">
+  <div class="wrap">
+    <header class="page-head">
+      <div class="kicker">Source Documents</div>
+      <h1 class="page-title">PDF Library</h1>
+      <p class="page-sub">Direct links to every primary document referenced across this library — no commentary, just the sources. Where a city publishes chapter-level PDFs, each chapter is linked separately.</p>
+    </header>
+    <div class="pdf-filter-bar">
+      <span class="pdf-filter-icon" aria-hidden="true">⌕</span>
+      <input type="text" id="pdf-filter-input" class="pdf-filter-input" placeholder="Filter by title or source…" aria-label="Filter PDF Library by title or source">
+      <button type="button" id="pdf-filter-clear" class="pdf-filter-clear" aria-label="Clear filter" hidden>✕</button>
+      <span class="pdf-filter-count" id="pdf-filter-count"></span>
+    </div>
+    <p class="pdf-filter-empty" id="pdf-filter-empty" hidden>No documents match that filter.</p>
+  </div>
+
+  <nav class="jump" aria-label="Section navigation">
+    <div class="wrap">
+      <a href="#pdf-1999gp">1999 General Plan</a>
+      <a href="#pdf-forward">GP Update</a>
+      <a href="#pdf-streets">Streets &amp; Transportation</a>
+      <a href="#pdf-peerplans">Peer Comprehensive Plans</a>
+      <a href="#pdf-ahistate">Incentives — State</a>
+      <a href="#pdf-ahicity">Incentives — City</a>
+      <a href="#pdf-historic">Historic Preservation</a>
+      <a href="#pdf-supporting">Supporting Docs</a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+<section class="sub" id="pdf-santafe">
+<div class="link-group" id="pdf-1999gp">
+<h2 class="link-group-title">Santa Fe — 1999 General Plan</h2>
+<p class="link-group-note">The plan currently being superseded — kept here for direct comparison. Chapters are scanned, non-machine-readable PDFs.</p>
+<div class="link-box">
+<a class="link-row" href="https://www.santafenm.gov/document_center/document/1704"><div class="link-info"><span class="link-title">Cover &amp; Table of Contents</span><span class="link-meta">santafenm.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.santafenm.gov/document_center/document/1705"><div class="link-info"><span class="link-title">Chapter 1 — General Plan Themes</span><span class="link-meta">santafenm.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.santafenm.gov/document_center/document/1706"><div class="link-info"><span class="link-title">Chapter 2 — Heritage Resources</span><span class="link-meta">santafenm.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.santafenm.gov/document_center/document/1707"><div class="link-info"><span class="link-title">Chapter 3 — Land Use</span><span class="link-meta">santafenm.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.santafenm.gov/document_center/document/1708"><div class="link-info"><span class="link-title">Chapter 4 — Growth Management</span><span class="link-meta">santafenm.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.santafenm.gov/document_center/document/1709"><div class="link-info"><span class="link-title">Chapter 5 — City Character</span><span class="link-meta">santafenm.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.santafenm.gov/document_center/document/1710"><div class="link-info"><span class="link-title">Chapter 6 — Transportation</span><span class="link-meta">santafenm.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.santafenm.gov/document_center/document/1711"><div class="link-info"><span class="link-title">Chapter 7 — Infrastructure &amp; Public Services</span><span class="link-meta">santafenm.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.santafenm.gov/document_center/document/1712"><div class="link-info"><span class="link-title">Chapter 8 — Natural Resources Management</span><span class="link-meta">santafenm.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.santafenm.gov/document_center/document/1713"><div class="link-info"><span class="link-title">Chapter 9 — Community Services</span><span class="link-meta">santafenm.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.santafenm.gov/document_center/document/1714"><div class="link-info"><span class="link-title">Chapter 10 — Institutional Framework</span><span class="link-meta">santafenm.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.santafenm.gov/document_center/document/1715"><div class="link-info"><span class="link-title">Affordable Housing Studies</span><span class="link-meta">santafenm.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.santafenm.gov/document_center/document/1716"><div class="link-info"><span class="link-title">Glossary of Terms</span><span class="link-meta">santafenm.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+</div>
+</div>
+<div class="link-group" id="pdf-forward">
+<h2 class="link-group-title">Santa Fe Forward — active General Plan update</h2>
+<div class="link-box">
+<a class="link-row" href="https://santafeforward.org/learn-more"><div class="link-info"><span class="link-title">Santa Fe Forward — Learn More</span><span class="link-meta">santafeforward.org</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.santafenewmexican.com/news/business/city-seeks-feedback-volunteers-for-first-general-plan-update-in-25-years/article_d0df34a3-c9df-463c-b819-d2d21e5539ce.html"><div class="link-info"><span class="link-title">"City seeks feedback... for first general plan update in 25 years"</span><span class="link-meta">santafenewmexican.com</span></div><span class="link-go">Open ↗</span></a>
+</div>
+</div>
+<div class="link-group" id="pdf-streets">
+<h2 class="link-group-title">Santa Fe — streets &amp; transportation sources</h2>
+<p class="link-group-note">Backing material for the Street Typologies page — MPO planning documents and the in-progress Land Development Code rewrite.</p>
+<div class="link-box">
+<a class="link-row" href="https://santafempo.org/wp-content/uploads/2022/11/Renderings-Boards_RED.pdf"><div class="link-info"><span class="link-title">Santa Fe MPO — Complete Streets Renderings</span><span class="link-meta">santafempo.org</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://santafempo.org/resources-2/roadway-functional-classification/"><div class="link-info"><span class="link-title">Santa Fe MPO — Roadway Functional Classification</span><span class="link-meta">santafempo.org</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://santafempo.org/wp-content/uploads/2014/03/FHWA-Approved-2016-MPO-Created-04-19-16.pdf"><div class="link-info"><span class="link-title">Santa Fe MPO — Functional Classification Map, FHWA-Approved</span><span class="link-meta">santafempo.org</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://santafenm.gov/document_center/document/7663"><div class="link-info"><span class="link-title">Draft Land Use &amp; Urban Design Plan</span><span class="link-meta">santafenm.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://santafenm.gov/Chapter_14_Rewrite-_Phase_1_(bill).pdf"><div class="link-info"><span class="link-title">Chapter 14 Land Development Code Rewrite — Phase 1 Bill</span><span class="link-meta">santafenm.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+</div>
+</div>
+<div class="link-group" id="pdf-peerplans">
+<h2 class="link-group-title">Peer comprehensive plans</h2>
+<div class="link-box">
+<a class="link-row" href="https://minneapolis2040.com/media/2019/pdf_minneapolis2040-just-policy-document-updated-june-2024.pdf"><div class="link-info"><span class="link-title">Minneapolis 2040 — Policy Document</span><span class="link-meta">minneapolis2040.com</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://services.austintexas.gov/edims/document.cfm?id=165140"><div class="link-info"><span class="link-title">Imagine Austin — Comprehensive Plan</span><span class="link-meta">services.austintexas.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://data.austintexas.gov/City-Government/Imagine-Austin-Comprehensive-Plan-Web-Full-PDF/ncss-muy9"><div class="link-info"><span class="link-title">Imagine Austin — Open Data PDF listing</span><span class="link-meta">data.austintexas.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://cms.tacoma.gov/Planning/"><div class="link-info"><span class="link-title">One Tacoma / Home in Tacoma — Planning Documents Hub</span><span class="link-meta">cms.tacoma.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.engagemissoula.com/growth-policy-update/documents"><div class="link-info"><span class="link-title">Our Missoula 2045 — Full Plan + Appendices</span><span class="link-meta">engagemissoula.com</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://ourmissoula.konveio.com/our-missoula-2045-land-use-plan"><div class="link-info"><span class="link-title">Our Missoula 2045 — Plan Viewer</span><span class="link-meta">ourmissoula.konveio.com</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="http://www.somervision2040.com/wp-content/uploads/sites/3/2021/10/SomerVision-2040-Adopted.pdf"><div class="link-info"><span class="link-title">SomerVision 2040 — Adopted Plan</span><span class="link-meta">somervision2040.com</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://cltfuture2040.com"><div class="link-info"><span class="link-title">Charlotte Future 2040 — Comprehensive Plan Site</span><span class="link-meta">cltfuture2040.com</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://bouldercolorado.gov/sites/default/files/2021-06/bvcp2020finalplan.pdf"><div class="link-info"><span class="link-title">Boulder Valley Comprehensive Plan — 2020 Update</span><span class="link-meta">bouldercolorado.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.flagstaff.az.gov"><div class="link-info"><span class="link-title">Flagstaff Regional Plan — City Document Center</span><span class="link-meta">flagstaff.az.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://santabarbaraca.gov/HousingElement"><div class="link-info"><span class="link-title">Santa Barbara — Housing Element Implementation</span><span class="link-meta">santabarbaraca.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://santabarbaraca.gov/sites/default/files/2024-10/Final%20Housing%20Element%20with%20Appendices.pdf"><div class="link-info"><span class="link-title">Santa Barbara — Housing Element 2023–2031 with Appendices</span><span class="link-meta">santabarbaraca.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.cityofsacramento.gov/content/dam/portal/cdd/Planning/adopted-2040-general-plan/2040%20GP_4-00_Part%204_Adopted.pdf"><div class="link-info"><span class="link-title">Sacramento 2040 General Plan — Part 4</span><span class="link-meta">cityofsacramento.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.cityofsacramento.gov/content/dam/portal/cdd/Planning/Housing/Missing-Middle-Housing/Summary%20of%20MMH%20Interim%20Ordinance.pdf"><div class="link-info"><span class="link-title">Sacramento — Missing Middle Housing Interim Ordinance Summary</span><span class="link-meta">cityofsacramento.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.portland.gov/bps/planning/comp-plan-2035"><div class="link-info"><span class="link-title">Portland 2035 Comprehensive Plan — Documents Hub</span><span class="link-meta">portland.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.portland.gov/bps/planning/comp-plan-2035/documents/goals-and-policies-chapter-3-urban-form/download"><div class="link-info"><span class="link-title">Portland 2035 — Ch. 3, Urban Form / Centers &amp; Corridors</span><span class="link-meta">portland.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://berkeleyca.gov/sites/default/files/documents/02_Land%20Use%20Element-FINAL.pdf"><div class="link-info"><span class="link-title">Berkeley General Plan — Land Use Element</span><span class="link-meta">berkeleyca.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.cincinnati-oh.gov/sites/planning/assets/2012%20-%20Plan%20Cincinnati.pdf"><div class="link-info"><span class="link-title">Plan Cincinnati — Full Plan</span><span class="link-meta">cincinnati-oh.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.columbus.gov/files/sharedassets/city/v/1/bzs/archived/planning-document-library/columbus-growth-strategy.pdf"><div class="link-info"><span class="link-title">Columbus Growth Strategy</span><span class="link-meta">columbus.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.gainesvillefl.gov/files/assets/public/v/1/sustainable-development/planning-department/documents/currently-adopted-comp-plan/goals-objectives-and-policies-future-land-use.pdf"><div class="link-info"><span class="link-title">Gainesville — Future Land Use Element</span><span class="link-meta">gainesvillefl.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.gainesvillefl.gov/files/assets/public/v/1/sustainable-development/planning-department/documents/imaginegnv-draft-april-2026.pdf"><div class="link-info"><span class="link-title">Gainesville — ImagineGNV 2050 Draft, Apr 2026</span><span class="link-meta">gainesvillefl.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.arlingtonva.us/files/sharedassets/public/projects/documents/comprehensive-plan/comp-plan_essential-guide-2023.pdf"><div class="link-info"><span class="link-title">Arlington County — Comprehensive Plan Essential Guide</span><span class="link-meta">arlingtonva.us</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.arlingtonva.us/Government/Projects/Plans-Studies/General-Land-Use-Plan"><div class="link-info"><span class="link-title">Arlington County — General Land Use Plan (GLUP)</span><span class="link-meta">arlingtonva.us</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.alexandriava.gov/sites/default/files/2024-01/mpa202300005.pdf"><div class="link-info"><span class="link-title">Alexandria — Master Plan Amendment #2023-00005</span><span class="link-meta">alexandriava.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://media.alexandriava.gov/content/planning/CitywideChapters/HousingMasterPlanCurrent.pdf"><div class="link-info"><span class="link-title">Alexandria — Housing Master Plan</span><span class="link-meta">media.alexandriava.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://bendoregon.gov/wp-content/uploads/2025/12/Bend-Comprehensive-Plan-2016.pdf"><div class="link-info"><span class="link-title">Bend Comprehensive Plan, 2016</span><span class="link-meta">bendoregon.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://static.spokanecity.org/documents/shapingspokane/comprehensive-plan/chapter-3-land-use-v4.pdf"><div class="link-info"><span class="link-title">Spokane — "Shaping Spokane" Ch. 3, Land Use</span><span class="link-meta">static.spokanecity.org</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://southbendin.gov/wp-content/uploads/2023/03/South-Bend-2045-Plan-ROADMAP.pdf"><div class="link-info"><span class="link-title">South Bend 2045 — Comprehensive Plan Roadmap</span><span class="link-meta">southbendin.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+</div>
+</div>
+<div class="link-group" id="pdf-ahistate">
+<h2 class="link-group-title">Affordable Housing Incentives — state programs</h2>
+<p class="link-group-note">Backing material for the Affordable Housing Incentives page's state-level table, plus the California and Massachusetts profile pages.</p>
+<div class="link-box">
+<a class="link-row" href="https://www.hcd.ca.gov/"><div class="link-info"><span class="link-title">California HCD — housing policy &amp; ADU data</span><span class="link-meta">hcd.ca.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://ternercenter.berkeley.edu/"><div class="link-info"><span class="link-title">Terner Center for Housing Innovation, UC Berkeley — SB 35 tracking</span><span class="link-meta">ternercenter.berkeley.edu</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://cayimby.org/blog/smaller-lots-smaller-prices-evidence-from-houston/"><div class="link-info"><span class="link-title">California YIMBY — comparative land-use research</span><span class="link-meta">cayimby.org</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://legal-planet.org/2026/06/"><div class="link-info"><span class="link-title">Legal Planet / Circulate SD — "Win-Win Bonus" report</span><span class="link-meta">legal-planet.org</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.masshousing.com/en/programs-outreach/planning-programs/40b"><div class="link-info"><span class="link-title">MassHousing — Chapter 40B overview</span><span class="link-meta">masshousing.com</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.mass.gov/chapter-40b-planning-and-information"><div class="link-info"><span class="link-title">Mass.gov — Chapter 40B planning &amp; information</span><span class="link-meta">mass.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://auchincloss.house.gov/media/in-the-news/tell-us-is-it-time-to-overhaul-chapter-40b-in-the-quest-for-affordable-housing"><div class="link-info"><span class="link-title">Coverage of active 2025 Chapter 40B reform proposals</span><span class="link-meta">auchincloss.house.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://apps.leg.wa.gov/rCW/default.aspx?cite=84.14&amp;full=true"><div class="link-info"><span class="link-title">RCW 84.14 — Washington Multifamily Tax Exemption, full statute text</span><span class="link-meta">apps.leg.wa.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://static.spokanecity.org/documents/economicdevelopment/incentives/mfte/2025-mfte-legislative-report.pdf"><div class="link-info"><span class="link-title">2025 statewide MFTE legislative report</span><span class="link-meta">static.spokanecity.org</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://cdola.colorado.gov/about-proposition-123"><div class="link-info"><span class="link-title">Colorado DOLA — Proposition 123 overview</span><span class="link-meta">cdola.colorado.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://dlg.colorado.gov/toci-grant-program"><div class="link-info"><span class="link-title">Colorado DOLA — TOC Infrastructure grant program</span><span class="link-meta">dlg.colorado.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.revenue.state.mn.us/local-affordable-housing-aid"><div class="link-info"><span class="link-title">Minnesota Dept. of Revenue — Local Affordable Housing Aid</span><span class="link-meta">revenue.state.mn.us</span></div><span class="link-go">Open ↗</span></a>
+</div>
+</div>
+<div class="link-group" id="pdf-ahicity">
+<h2 class="link-group-title">Affordable Housing Incentives — city programs</h2>
+<p class="link-group-note">Backing material for the Affordable Housing Incentives page's city-level table, plus the Seattle and Houston profile pages and the incentive sections added to Austin, Minneapolis, Tacoma, and Spokane.</p>
+<div class="link-box">
+<a class="link-row" href="https://www.austintexas.gov/housing/development-incentives-and-agreements"><div class="link-info"><span class="link-title">City of Austin — development incentives &amp; agreements</span><span class="link-meta">austintexas.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.planetizen.com/news/2023/09/125695-affordability-unlocked-boosts-austins-affordable-housing-production"><div class="link-info"><span class="link-title">Planetizen — Affordability Unlocked results</span><span class="link-meta">planetizen.com</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://minneapolismn.gov/business-services/business-assistance/financing-developers/4d-incentive/participation-rules"><div class="link-info"><span class="link-title">Minneapolis — 4(d) incentive participation rules</span><span class="link-meta">minneapolismn.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://seattle.gov/documents/Departments/Housing/ProgramsInitiatives/MFTEReauthorization/UW_MFTE_FinalReport_112224.pdf"><div class="link-info"><span class="link-title">UW / City of Seattle — MFTE program evaluation</span><span class="link-meta">seattle.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.hcmp.com/blog/hcmp-client-alert-seattle-city-council-passes-mfte-program-7"><div class="link-info"><span class="link-title">HCMP — Seattle Council passes MFTE Program 7</span><span class="link-meta">hcmp.com</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.theurbanist.org/homebuilders-warn-seattles-planned-mfte-changes-threaten-to-kill-affordability-program/"><div class="link-info"><span class="link-title">The Urbanist — homebuilders on the 2025 MFTE changes</span><span class="link-meta">theurbanist.org</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://tacoma.gov/government/departments/community-and-economic-development/housing-division/tax-incentives/"><div class="link-info"><span class="link-title">City of Tacoma — tax incentives</span><span class="link-meta">tacoma.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.huduser.gov/portal/periodicals/cityscape/vol26num3/ch9.pdf"><div class="link-info"><span class="link-title">HUD Cityscape — minimum-lot-size reform effects</span><span class="link-meta">huduser.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.mercatus.org/research/policy-briefs/liberalizing-land-use-regulations-case-houston"><div class="link-info"><span class="link-title">Mercatus Center — liberalizing land use, the case of Houston</span><span class="link-meta">mercatus.org</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://kinder.rice.edu/urbanedge/houston-and-everywhere-else-lot-size-matters"><div class="link-info"><span class="link-title">Kinder Institute — Houston and everywhere else, lot size matters</span><span class="link-meta">kinder.rice.edu</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://kinder.rice.edu/urbanedge/no-houston-isnt-walkable-city-you-have-start-somewhere"><div class="link-info"><span class="link-title">Kinder Institute — no, Houston isn't a walkable city</span><span class="link-meta">kinder.rice.edu</span></div><span class="link-go">Open ↗</span></a>
+</div>
+</div>
+<div class="link-group" id="pdf-historic">
+<h2 class="link-group-title">Historic Preservation Approaches</h2>
+<p class="link-group-note">Backing material for the Historic Preservation Approaches page and the San Antonio, Charlotte, Miami, Charleston, and Savannah profile pages, plus the Santa Fe pre-planning report that now grounds that page's case-study selection and the Land Development Code sections and CLG standards checked against it in that page's closing section.</p>
+<div class="link-box">
+<a class="link-row" href="https://santafenm.gov/media/ordinances_resolutions/1a_-_Continuity___Connection_Final_Report_interactive-compressed.pdf"><div class="link-info"><span class="link-title">City of Santa Fe — Continuity and Connection: A Pre-Planning Report on the State of Historic Preservation in Santa Fe</span><span class="link-meta">santafenm.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://nmhistoricpreservation.org/assets/files/clg/NM%20CLG%20Manual%20-%202020.pdf"><div class="link-info"><span class="link-title">NM Historic Preservation Division — Certified Local Government (CLG) Manual (2020)</span><span class="link-meta">nmhistoricpreservation.org</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.nmhistoricpreservation.org/programs/clg.html"><div class="link-info"><span class="link-title">NM Historic Preservation Division — Certified Local Government program</span><span class="link-meta">nmhistoricpreservation.org</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://library.municode.com/nm/santa_fe/codes/code_of_ordinances?nodeId=CH14LADE_ART14-2REDEKIBO"><div class="link-info"><span class="link-title">Santa Fe Land Development Code — Article 14-2, Review and Decision-Making Bodies</span><span class="link-meta">library.municode.com</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://library.municode.com/nm/santa_fe/codes/code_of_ordinances?nodeId=CH14LADE_ART14-3REAPPR"><div class="link-info"><span class="link-title">Santa Fe Land Development Code — Article 14-3, Review and Approval Procedures</span><span class="link-meta">library.municode.com</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://library.municode.com/nm/santa_fe/codes/code_of_ordinances?nodeId=CH14LADE_ART14-5OVZODI"><div class="link-info"><span class="link-title">Santa Fe Land Development Code — Article 14-5, Overlay Zoning Districts (Historic Districts)</span><span class="link-meta">library.municode.com</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.nps.gov/subjects/historicpreservation/standards.htm"><div class="link-info"><span class="link-title">National Park Service — Secretary of the Interior's Standards and Guidelines, full index</span><span class="link-meta">nps.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.nps.gov/articles/sec-standards-prof-quals.htm"><div class="link-info"><span class="link-title">National Park Service — Secretary of the Interior's Professional Qualifications Standards</span><span class="link-meta">nps.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.nps.gov/subjects/taxincentives/secretarys-standards-rehabilitation.htm"><div class="link-info"><span class="link-title">National Park Service — Secretary of the Interior's Standards for Rehabilitation</span><span class="link-meta">nps.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.nps.gov/articles/sec_stds_id_standards.htm"><div class="link-info"><span class="link-title">National Park Service — Secretary of the Interior's Standards for Identification</span><span class="link-meta">nps.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.nps.gov/articles/sec_stds_eval_stds.htm"><div class="link-info"><span class="link-title">National Park Service — Secretary of the Interior's Standards for Evaluation</span><span class="link-meta">nps.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.sa.gov/Directory/Departments/OHP/Landmarks-Heritage/Incentives"><div class="link-info"><span class="link-title">City of San Antonio — Office of Historic Preservation incentives</span><span class="link-meta">sa.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://sanantonioreport.org/san-antonio-city-tax-breaks-historic-property-owners-king-william/"><div class="link-info"><span class="link-title">San Antonio Report — historic property tax breaks</span><span class="link-meta">sanantonioreport.org</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://ui.charlotte.edu/"><div class="link-info"><span class="link-title">UNC Charlotte Urban Institute</span><span class="link-meta">ui.charlotte.edu</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.axios.com/local/charlotte/2024/historic-preservation-charlotte"><div class="link-info"><span class="link-title">Axios Charlotte — on the Steele Creek Manse</span><span class="link-meta">axios.com</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.wfae.org/local-news"><div class="link-info"><span class="link-title">WFAE — local Charlotte preservation coverage</span><span class="link-meta">wfae.org</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.miami21.org/PublicBenefits_HistoricPreservation.asp"><div class="link-info"><span class="link-title">Miami 21 — Public Benefits: Historic Preservation TDR</span><span class="link-meta">miami21.org</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.miaminewtimes.com/arts/inside-the-vagabond-hotel-biscayne-boulevards-restored-mimo-gem-photos-6495935"><div class="link-info"><span class="link-title">Miami New Times — inside the Vagabond Hotel</span><span class="link-meta">miaminewtimes.com</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.biscaynetimes.com/news/upper-east-side-residents-haggle-over-mimo/"><div class="link-info"><span class="link-title">Biscayne Times — residents haggle over MiMo height limits</span><span class="link-meta">biscaynetimes.com</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.preservationsociety.org/past-psc-advocacy-wins-1931-zoning-ordinance/"><div class="link-info"><span class="link-title">Preservation Society of Charleston — the 1931 zoning ordinance</span><span class="link-meta">preservationsociety.org</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.nps.gov/articles/charleston-and-preservation.htm"><div class="link-info"><span class="link-title">National Park Service — Charleston and preservation</span><span class="link-meta">nps.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.postandcourier.com/boomandbalance/charleston-peninsula-gains-residents-first-time-since-1930s/article_58deeab7-2af2-4082-ad8f-bb9bd3df2a32.html"><div class="link-info"><span class="link-title">Post and Courier — Charleston peninsula population trend</span><span class="link-meta">postandcourier.com</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="http://www.myhsf.org/available-properties/revolving-fund/"><div class="link-info"><span class="link-title">Historic Savannah Foundation — Revolving Fund</span><span class="link-meta">myhsf.org</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.wtoc.com/2024/01/04/threatened-district-is-development-diminishing-savannahs-character/"><div class="link-info"><span class="link-title">WTOC — is development diminishing Savannah's character?</span><span class="link-meta">wtoc.com</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://en.wikipedia.org/wiki/Pike_Place_Market"><div class="link-info"><span class="link-title">Wikipedia — Pike Place Market (Seattle historic district)</span><span class="link-meta">en.wikipedia.org</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.laconservancy.org/"><div class="link-info"><span class="link-title">Los Angeles Conservancy — on SurveyLA</span><span class="link-meta">laconservancy.org</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://planning.lacity.gov/preservation-design/survey-la"><div class="link-info"><span class="link-title">LA City Planning — SurveyLA program overview</span><span class="link-meta">planning.lacity.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.sf.gov/departments/planning-department"><div class="link-info"><span class="link-title">San Francisco Planning — Legacy Business Program</span><span class="link-meta">sf.gov</span></div><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://sfosb.org/sites/default/files/2023-01/Legacy%20Business%20Program%20Annual%20Report%20FY21-22.pdf"><div class="link-info"><span class="link-title">San Francisco Office of Small Business — Legacy Business Program Annual Report, FY21–22</span><span class="link-meta">sfosb.org</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+</div>
+</div>
+<div class="link-group" id="pdf-supporting">
+<h2 class="link-group-title">Supporting ordinances &amp; studies</h2>
+<div class="link-box">
+<a class="link-row" href="https://southbendin.gov/wp-content/uploads/2023/06/SBBT_Catalog_23-0506-lowres.pdf"><div class="link-info"><span class="link-title">South Bend — Neighborhood Infill Design Catalog</span><span class="link-meta">southbendin.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.azleague.org/DocumentCenter/View/28045/HB2721-middle-housing"><div class="link-info"><span class="link-title">Arizona League of Cities — HB 2721 Middle Housing Model Ordinance</span><span class="link-meta">azleague.org</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://cms.tacoma.gov/Planning/Affordable%20Housing/AHAS%20Planning%20Actions/HIT_Topic%20Summary_Overview_July%202024.pdf"><div class="link-info"><span class="link-title">Home in Tacoma Phase 2 — Topic Summary Overview</span><span class="link-meta">cms.tacoma.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://cms.tacoma.gov/Planning/Affordable%20Housing/AHAS%20Planning%20Actions/Feasibility%20Analysis%20Findings%20Memo%20071124_FINAL.pdf"><div class="link-info"><span class="link-title">Home in Tacoma Phase II — Development Feasibility Findings</span><span class="link-meta">cms.tacoma.gov</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+<a class="link-row" href="https://www.cityoftacoma.org/UserFiles/Servers/Server_6/File/PDS/HIT%20Round%202%20FAQs_%20(002).pdf"><div class="link-info"><span class="link-title">Home in Tacoma — Round 2 FAQs</span><span class="link-meta">cityoftacoma.org</span></div><span class="link-type">PDF</span><span class="link-go">Open ↗</span></a>
+</div>
+</div>
+</section>
+<footer class="page-foot">
+          Links go to each city or agency's official site. A few (noted "Document Center" or plan-site links) lead to a hub page rather than a single PDF where the source publishes chapters individually or paginates its plan viewer.
+        </footer>
+  </div>
+</BaseLayout>
+
+<script>
+  const input = document.getElementById('pdf-filter-input');
+  if (input) {
+    const groups = Array.from(document.querySelectorAll('.link-group'));
+    const nav = document.querySelector('nav.jump');
+    const clearBtn = document.getElementById('pdf-filter-clear');
+    const countEl = document.getElementById('pdf-filter-count');
+    const emptyEl = document.getElementById('pdf-filter-empty');
+
+    function applyFilter() {
+      const q = input.value.trim().toLowerCase();
+      let totalVisible = 0;
+      groups.forEach((group) => {
+        const rows = Array.from(group.querySelectorAll('.link-row'));
+        let visibleInGroup = 0;
+        rows.forEach((row) => {
+          const match = !q || row.textContent.toLowerCase().indexOf(q) !== -1;
+          row.style.display = match ? '' : 'none';
+          if (match) visibleInGroup++;
+        });
+        group.style.display = visibleInGroup ? '' : 'none';
+        totalVisible += visibleInGroup;
+      });
+      if (nav) nav.style.display = q ? 'none' : '';
+      clearBtn.hidden = !q;
+      countEl.textContent = q ? (totalVisible + (totalVisible === 1 ? ' result' : ' results')) : '';
+      emptyEl.hidden = !(q && totalVisible === 0);
+    }
+
+    input.addEventListener('input', applyFilter);
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && input.value) {
+        input.value = '';
+        applyFilter();
+      }
+    });
+    clearBtn.addEventListener('click', () => {
+      input.value = '';
+      applyFilter();
+      input.focus();
+    });
+  }
+</script>
