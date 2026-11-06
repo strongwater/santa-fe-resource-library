@@ -1,0 +1,62 @@
+---
+// Primary site navigation. Real <a href> links replace the old
+// data-target SPA router entirely — see MIGRATION_GUIDE.md.
+const path = Astro.url.pathname;
+
+function isActive(href: string): boolean {
+  if (href === '/') return path === '/';
+  return path === href || path.startsWith(href);
+}
+
+const navGroups: { label?: string; links: { href: string; label: string; tag?: string }[] }[] = [
+  { links: [{ href: '/', label: 'Overview' }] },
+  { links: [{ href: '/recommendations/', label: 'Recommendations', tag: '5 areas' }] },
+  {
+    label: 'Comparative Research',
+    links: [
+      { href: '/research/general-plan-reforms/', label: 'Effective General Plan Reforms', tag: '20 cities' },
+      { href: '/research/plan-language/', label: 'General Plan Language Comparisons', tag: '20 plans' },
+      { href: '/research/housing-incentives/', label: 'Affordable Housing Incentives', tag: '11 programs' },
+      { href: '/research/ldc-concepts/', label: 'Land Development Code Concepts', tag: '7 concepts' },
+      { href: '/research/historic-preservation/', label: 'Historic Preservation Approaches', tag: '8 cities' },
+    ],
+  },
+  {
+    label: 'Browse by Location',
+    links: [
+      { href: '/cities/', label: 'By City', tag: '26 cities' },
+      { href: '/states/', label: 'By State', tag: '5 states' },
+    ],
+  },
+  {
+    label: 'Source Documents',
+    links: [{ href: '/pdf-library/', label: 'PDF Library', tag: '85+ links' }],
+  },
+];
+---
+<nav class="sidebar" id="sidebar" aria-label="Resource library navigation">
+  <a class="brand" href="/">
+    <span class="mark">GP &amp; LDC Update</span>
+    <h1>Santa Fe Urban Planning Resource Library</h1>
+  </a>
+
+  {navGroups.map((group) => (
+    <div class="nav-group">
+      {group.label && <div class="nav-label">{group.label}</div>}
+      {group.links.map((link) => (
+        <a
+          class:list={['nav-link', { active: isActive(link.href) }]}
+          href={link.href}
+          aria-current={isActive(link.href) ? 'page' : undefined}
+        >
+          {link.label} {link.tag && <span class="tag">{link.tag}</span>}
+        </a>
+      ))}
+    </div>
+  ))}
+
+  <div class="sidebar-foot">
+    Compiled Aug 2026<br>
+    First-pass working library
+  </div>
+</nav>

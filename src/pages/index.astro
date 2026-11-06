@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const cards = [
+  {
+    href: '/recommendations/',
+    tag: 'Cross-cutting',
+    title: 'Recommendations for Santa Fe',
+    body: "Every recommendation from this library's research, gathered in one place by research area, each linked back to the full evidence behind it — the fastest way to see what this library suggests without reading all five research pages.",
+    meta: '5 research areas · 31 recommendations',
+  },
+  {
+    href: '/research/general-plan-reforms/',
+    tag: 'Research · Aug 2026',
+    title: 'Effective General Plan Reforms',
+    body: 'Progressive General Plans and missing-middle / walkable-urbanism reforms from 20 American cities — flagship reforms, durability lessons from reversals and litigation, and peer-scale cities closer to Santa Fe’s size and character.',
+    meta: '20 cities · comparison table + city profiles',
+  },
+  {
+    href: '/research/plan-language/',
+    tag: 'Research · Aug 2026',
+    title: 'General Plan Language Comparisons',
+    body: 'Actual verbatim vision, goal, and urban-center language pulled from the same 20 cities profiled in Effective General Plan Reforms — what makes that language actionable rather than vague is drawn out on the Recommendations page.',
+    meta: '20 plans · verbatim quotes + sources',
+  },
+  {
+    href: '/research/housing-incentives/',
+    tag: 'Research · Aug 2026',
+    title: 'Affordable Housing Incentives',
+    body: 'State and city programs that made building — especially compact, walkable, transit-connected homes — more attractive rather than more restricted: density bonuses, tax exemptions, fee waivers, and funding, not mandates or fees.',
+    meta: '11 programs · 5 states, 6 cities · sources',
+  },
+  {
+    href: '/research/ldc-concepts/',
+    tag: 'Research · Aug 2026',
+    title: 'Land Development Code Concepts',
+    body: 'Seven ways to restructure how code is written and how permits get decided — form-based code, objective standards, by-right approval, pre-approved plans, independent hearing examiners, and more — organized by concept, not by city.',
+    meta: '7 concepts · sources',
+  },
+  {
+    href: '/research/historic-preservation/',
+    tag: 'Research · Aug 2026',
+    title: 'Historic Preservation Approaches',
+    body: "Eight case studies chosen to answer the specific gaps Santa Fe's own 2021 <em>Continuity and Connection</em> report identifies in its historic-preservation program — survey and documentation, board authority, preservation-and-displacement, and community voice.",
+    meta: '8 cities · case studies + sources',
+  },
+  {
+    href: '/pdf-library/',
+    tag: 'Source documents',
+    title: 'PDF Library',
+    body: "Direct links to every source document referenced across the library — Santa Fe's 1999 General Plan chapters, the twenty peer comprehensive plans, and supporting ordinances and studies. No commentary, just the primary sources.",
+    meta: '85+ documents · grouped by category',
+  },
+];
+---
+<BaseLayout title="Overview">
+  <div class="wrap">
+    <div class="hero-home">
+      <h1>Santa Fe Urban Planning Resource Library</h1>
+      <p class="lede">A working library of research supporting Santa Fe's General Plan &amp; Land Development Code update — built to grow as the project team adds more findings, comparisons, and source material.</p>
+      <p class="lede" style="font-size:0.98rem;"><a href="https://santafeforward.org/learn-more">Santa Fe Forward</a>, the city's General Plan update now underway, is a chance to build on 25 years of growth with a sharper, more actionable plan. This library exists to support that effort — drawing on twenty peer cities' reforms, plan language, and source documents to help ground the update's recommendations.</p>
+    </div>
+
+    <div class="resource-grid">
+      {cards.map((card) => (
+        <a class="resource-card" href={card.href}>
+          <span class="rc-tag">{card.tag}</span>
+          <h3>{card.title}</h3>
+          <p set:html={card.body} />
+          <div class="rc-meta">{card.meta}</div>
+        </a>
+      ))}
+      <div class="resource-card ghost">More resources will appear here as the library grows</div>
+    </div>
+  </div>
+</BaseLayout>

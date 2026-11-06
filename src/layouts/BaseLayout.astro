@@ -1,0 +1,61 @@
+---
+import Sidebar from '../components/Sidebar.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "A working library of research supporting Santa Fe's General Plan & Land Development Code update." } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title} · Santa Fe Urban Planning Resource Library</title>
+  <meta name="description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div class="mobile-bar">
+    <h1 style="font-family:'Fraunces',Georgia,serif;">Santa Fe Urban Planning Resource Library</h1>
+    <button id="navToggle" type="button" aria-expanded="false">Menu</button>
+  </div>
+
+  <div class="shell">
+    <Sidebar />
+    <div class="content-area">
+      <slot />
+    </div>
+  </div>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const navToggle = document.getElementById('navToggle');
+
+    if (navToggle && sidebar) {
+      navToggle.addEventListener('click', () => {
+        const open = sidebar.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+
+    // Close the mobile sidebar after navigating (real links now trigger a
+    // full/soft navigation, so this only matters for the brief moment
+    // before that navigation completes).
+    sidebar?.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        sidebar.classList.remove('open');
+        navToggle?.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
