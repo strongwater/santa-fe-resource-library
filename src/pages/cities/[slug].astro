@@ -1,0 +1,49 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SantaFeComparison from '../../components/SantaFeComparison.astro';
+
+export async function getStaticPaths() {
+  const cities = await getCollection('cities');
+  return cities.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { name, kicker, pageSub, xrefs, snapshot, showSantaFeComparison } = entry.data;
+const { Content } = await render(entry);
+---
+<BaseLayout title={name} description={pageSub}>
+  <div class="wrap">
+    <header class="page-head">
+      <div class="kicker">{kicker}</div>
+      <h1 class="page-title">{name}</h1>
+      <p class="page-sub">{pageSub}</p>
+    </header>
+  </div>
+  <div class="wrap">
+    {xrefs.length > 0 && (
+      <p class="xref-row">
+        {xrefs.map((x) => <a href={x.href}>&#8617; {x.label}</a>)}
+      </p>
+    )}
+
+    {snapshot.length > 0 && (
+      <div class="snapshot">
+        {snapshot.map((item) => (
+          <div class="snap-item">
+            <span class="snap-label">{item.label}</span>
+            <span class="snap-value" style={item.valueStyle} set:html={item.value} />
+            {item.note && <span class="snap-note">{item.note}</span>}
+          </div>
+        ))}
+      </div>
+    )}
+
+    {showSantaFeComparison && <SantaFeComparison />}
+
+    <Content />
+  </div>
+</BaseLayout>

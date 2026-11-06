@@ -1,0 +1,9 @@
+---
+// Renders the "For comparison, Santa Fe: ..." line that appeared,
+// character-for-character identical, on 26 of the 29 city/state profiles
+// in the original single-file site. Include this once per city page
+// instead of pasting the paragraph into each Markdown body — see
+// MIGRATION_GUIDE.md.
+import { santaFeStats as s } from '../lib/santaFeStats';
+---
+<p class="section-note" style="margin:8px 0 0;font-size:0.82rem;">For comparison, Santa Fe: population {s.population} ({s.populationNote}) &middot; land area {s.landArea} &middot; density {s.density} &middot; climate zone {s.climateZone} &middot; median household income {s.medianHouseholdIncome} &middot; median home value {s.medianHomeValue} ({s.medianHomeValueNote}), a {s.priceToIncomeRatio} price-to-income ratio &middot; cost to build {s.costToBuild} ({s.costToBuildNote}) &middot; cost to buy {s.costToBuy} ({s.costToBuyNote}), a {s.buildToBuyPremium} build-to-buy premium. <span style="color:var(--ink-faint);">{s.sourceNote}</span></p>
