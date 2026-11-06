@@ -319,6 +319,7 @@
     padding: 8px;
     overflow: visible;
     max-width: 300px;
+    margin: 0;
     border: 1px solid var(--line);
     border-radius: 10px;
     background: var(--surface-raised);
