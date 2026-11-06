@@ -29,6 +29,9 @@ src/
   pages/
     index.astro                          Home
     recommendations/index.astro          Recommendations
+    local/
+      santa-fe-today/index.astro         Santa Fe Today (Assessment Report synthesis)
+      nm-housing-policy/index.astro      New Mexico & Local Housing Policy
     research/
       general-plan-reforms/index.astro   Effective General Plan Reforms
       plan-language/index.astro          General Plan Language Comparisons
