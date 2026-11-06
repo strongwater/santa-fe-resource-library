@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="By City" description="Every city with its own profile in this library, in one place.">
+  <div class="wrap">
+    <header class="page-head">
+      <div class="kicker">Browse by Location</div>
+      <h1 class="page-title">By City</h1>
+      <p class="page-sub">Every city with its own profile in this library, in one place. Click through for the reform itself, the plan's own language, and every source document gathered on it.</p>
+      <div class="meta-row">
+        <span><b>Compiled</b> August 2026</span>
+        <span><b>Cities profiled</b> 26</span>
+        <span><b>See also</b> <a href="/states/">By State</a></span>
+      </div>
+    </header>
+  </div>
+
+  <div class="wrap">
+    <section class="sub" id="bycity-all">
+      <div class="section-head">
+        <div class="section-num">ALL 26 CITIES</div>
+        <h2 class="section-title">Every city in this library, at a glance</h2>
+        <p class="section-note">Click any city to see everything gathered on it in one place. <span class="pill flagship">Flagship</span> cities set the national template for a reform; <span class="pill cautionary">Reform Durability</span> cities show what determines whether a reform lasts; <span class="pill peerscale">Peer-scale</span> cities are closest to Santa Fe's own size and character; <span class="pill incentive">Incentive Example</span> cities were added for their affordable-housing incentive programs rather than physical similarity; <span class="pill preservation">Preservation Example</span> cities were added for their historic-preservation programs. Click a column header in the table below to sort by that metric.</p>
+      </div>
+      <div class="table-scroll">
+        <table class="compare cities">
+          <thead>
+            <tr>
+              <th class="sortable" data-key="city" data-sort-type="text" tabindex="0">City</th>
+              <th class="col-type">Type</th>
+              <th>About</th>
+              <th class="sortable tooltip-host" data-key="ratio" data-sort-type="num" tabindex="0">Price-to-income<span class="tooltip-bubble">Median home value ÷ median household income. Demographia calls 5.1×+ "severely unaffordable."</span></th>
+              <th class="sortable tooltip-host" data-key="premium" data-sort-type="num" tabindex="0">Build-to-buy<span class="tooltip-bubble">Cost to buy per sq ft ÷ cost to build per sq ft — a rough proxy for how much of the purchase price is land, code, and process rather than construction.</span></th>
+            </tr>
+          </thead>
+          <tbody class="pinned-body">
+            <tr class="santafe-row">
+              <td class="city"><a href="/cities/santafe/">Santa Fe, NM</a></td>
+              <td class="type-cell"><span class="pill santafe">Anchor</span></td>
+              <td class="why combined"><ul class="mini-list"><li>$73,482 median income · $444,900 median home value.</li><li>The reference point every other row here is measured against, not a comparison itself — see its full profile for every source figure.</li></ul></td>
+              <td class="num"><span class="aff-badge aff-4">6.1×</span></td>
+              <td class="num"><span class="aff-badge aff-1">0.95×</span></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr><td class="city"><a href="/cities/minneapolis/">Minneapolis, MN</a></td><td class="type-cell"><span class="pill flagship">Flagship</span></td><td class="why combined"><ul class="mini-list"><li>Large metro — not a physical match.</li><li>First major U.S. city to end single-family-only zoning citywide; the best-measured before/after housing data in this scan.</li></ul></td><td class="num" data-value="4.480"><span class="aff-badge aff-3">4.5×</span></td><td class="num" data-value="1.653"><span class="aff-badge aff-2">1.65×</span></td></tr>
+            <tr><td class="city"><a href="/cities/portland/">Portland, OR</a></td><td class="type-cell"><span class="pill flagship">Flagship</span></td><td class="why combined"><ul class="mini-list"><li>Distinct downtown + neighborhood nodes, far larger scale.</li><li>Most complete before/after data for legalizing duplex-through-fourplex housing citywide.</li></ul></td><td class="num" data-value="6.396"><span class="aff-badge aff-4">6.4×</span></td><td class="num" data-value="2.576"><span class="aff-badge aff-3">2.58×</span></td></tr>
+            <tr><td class="city"><a href="/cities/sacramento/">Sacramento, CA</a></td><td class="type-cell"><span class="pill flagship">Flagship</span></td><td class="why combined"><ul class="mini-list"><li>State capital, tourism/government economy.</li><li>A useful data point on implementation pacing — ambitious ordinance, construction still catching up.</li></ul></td><td class="num" data-value="5.798"><span class="aff-badge aff-4">5.8×</span></td><td class="num" data-value="1.113"><span class="aff-badge aff-2">1.11×</span></td></tr>
+            <tr><td class="city"><a href="/cities/charlotte/">Charlotte, NC</a></td><td class="type-cell"><span class="pill flagship">Flagship</span></td><td class="why combined"><ul class="mini-list"><li>Not physically similar — larger, flatter, newer.</li><li>States outright that its land-use categories map to future zoning districts — a model for pairing GP + LDC.</li></ul></td><td class="num" data-value="4.700"><span class="aff-badge aff-3">4.7×</span></td><td class="num" data-value="1.580"><span class="aff-badge aff-2">1.58×</span></td></tr>
+            <tr><td class="city"><a href="/cities/austin/">Austin, TX</a></td><td class="type-cell"><span class="pill flagship">Flagship</span></td><td class="why combined"><ul class="mini-list"><li>University + tourism economy, much larger.</li><li>Names and geolocates 48 specific centers/corridors — a model for defining "activity center."</li></ul></td><td class="num" data-value="5.929"><span class="aff-badge aff-4">5.9×</span></td><td class="num" data-value="2.080"><span class="aff-badge aff-3">2.08×</span></td></tr>
+            <tr><td class="city"><a href="/cities/berkeley/">Berkeley, CA</a></td><td class="type-cell"><span class="pill flagship">Flagship</span></td><td class="why combined"><ul class="mini-list"><li>University town.</li><li>Birthplace of SF zoning; a clear example of why folding a reform back into the General Plan pays off.</li></ul></td><td class="num" data-value="13.081"><span class="aff-badge aff-4">13.1×</span></td><td class="num" data-value="1.452"><span class="aff-badge aff-2">1.45×</span></td></tr>
+            <tr><td class="city"><a href="/cities/cincinnati/">Cincinnati, OH</a></td><td class="type-cell"><span class="pill flagship">Flagship</span></td><td class="why combined"><ul class="mini-list"><li>Not physically similar.</li><li>A multi-hearing rollout that offers real engagement-design lessons.</li></ul></td><td class="num" data-value="4.364"><span class="aff-badge aff-3">4.4×</span></td><td class="num" data-value="1.144"><span class="aff-badge aff-2">1.14×</span></td></tr>
+            <tr><td class="city"><a href="/cities/columbus/">Columbus, OH</a></td><td class="type-cell"><span class="pill flagship">Flagship</span></td><td class="why combined"><ul class="mini-list"><li>Not physically similar; large Midwest capital.</li><li>Mid-rewrite of its entire zoning code — the closest process parallel to Santa Fe's LDC rewrite.</li></ul></td><td class="num" data-value="3.827"><span class="aff-badge aff-2">3.8×</span></td><td class="num" data-value="1.164"><span class="aff-badge aff-2">1.16×</span></td></tr>
+            <tr><td class="city"><a href="/cities/gainesville/">Gainesville, FL</a></td><td class="type-cell"><span class="pill cautionary">Reform Durability</span></td><td class="why combined"><ul class="mini-list"><li>University town with a historic core.</li><li>The clearest case in this scan for anchoring reform in the comprehensive plan, not zoning code alone.</li></ul></td><td class="num" data-value="5.358"><span class="aff-badge aff-4">5.4×</span></td><td class="num" data-value="1.135"><span class="aff-badge aff-2">1.14×</span></td></tr>
+            <tr><td class="city"><a href="/cities/arlington/">Arlington Co., VA</a></td><td class="type-cell"><span class="pill cautionary">Reform Durability</span></td><td class="why combined"><ul class="mini-list"><li>Dense inner-suburb, not physically similar.</li><li>Amended GP + LDC together, then navigated a procedural court challenge — a model for paper-trailing the adoption process.</li></ul></td><td class="num" data-value="6.298"><span class="aff-badge aff-4">6.3×</span></td><td class="num" data-value="2.716"><span class="aff-badge aff-3">2.72×</span></td></tr>
+            <tr><td class="city"><a href="/cities/alexandria/">Alexandria, VA</a></td><td class="type-cell"><span class="pill cautionary">Reform Durability</span></td><td class="why combined"><ul class="mini-list"><li>Historic core, tourism-driven.</li><li>A same-approach reform to Arlington's that was upheld — a model adoption record.</li></ul></td><td class="num" data-value="6.142"><span class="aff-badge aff-4">6.1×</span></td><td class="num" data-value="2.185"><span class="aff-badge aff-3">2.18×</span></td></tr>
+            <tr><td class="city"><a href="/cities/boulder/">Boulder, CO</a></td><td class="type-cell"><span class="pill peerscale">Peer-scale</span></td><td class="why combined"><ul class="mini-list"><li>Home-rule college town, growth-boundary + height-limit tradition much like Santa Fe's.</li><li>A model for how state legislation can do political work local council would otherwise absorb alone.</li></ul></td><td class="num" data-value="11.881"><span class="aff-badge aff-4">11.9×</span></td><td class="num" data-value="2.937"><span class="aff-badge aff-3">2.94×</span></td></tr>
+            <tr><td class="city"><a href="/cities/missoula/">Missoula, MT</a></td><td class="type-cell"><span class="pill peerscale">Peer-scale</span></td><td class="why combined"><ul class="mini-list"><li>University town, mountain-valley setting, tourism economy, acute housing-cost crisis.</li><li>Near-identical context to Santa Fe, with a resident-driven engagement process worth copying.</li></ul></td><td class="num" data-value="6.721"><span class="aff-badge aff-4">6.7×</span></td><td class="num" data-value="1.894"><span class="aff-badge aff-2">1.89×</span></td></tr>
+            <tr><td class="city"><a href="/cities/bend/">Bend, OR</a></td><td class="type-cell"><span class="pill peerscale">Peer-scale</span></td><td class="why combined"><ul class="mini-list"><li>Fast-growing high-desert resort/tourism city.</li><li>State-mandated "Climate Friendly Areas" concentrate walkable-center intensity onto specific zones.</li></ul></td><td class="num" data-value="7.453"><span class="aff-badge aff-4">7.5×</span></td><td class="num" data-value="1.974"><span class="aff-badge aff-2">1.97×</span></td></tr>
+            <tr><td class="city"><a href="/cities/flagstaff/">Flagstaff, AZ</a></td><td class="type-cell"><span class="pill peerscale">Peer-scale</span></td><td class="why combined"><ul class="mini-list"><li>Likely the closest national peer — similar population, historic downtown, university, high desert, tourism.</li><li>State-mandated middle-housing code that drew broad public support, on an already form-based code.</li></ul></td><td class="num" data-value="7.732"><span class="aff-badge aff-4">7.7×</span></td><td class="num" data-value="2.194"><span class="aff-badge aff-3">2.19×</span></td></tr>
+            <tr><td class="city"><a href="/cities/spokane/">Spokane, WA</a></td><td class="type-cell"><span class="pill peerscale">Peer-scale</span></td><td class="why combined"><ul class="mini-list"><li>Mid-size city, not a close physical peer.</li><li>The best-documented dimensional-standards model — exactly what Santa Fe's blank §14-6.5(D) table needs.</li></ul></td><td class="num" data-value="5.188"><span class="aff-badge aff-4">5.2×</span></td><td class="num" data-value="1.267"><span class="aff-badge aff-2">1.27×</span></td></tr>
+            <tr><td class="city"><a href="/cities/tacoma/">Tacoma, WA</a></td><td class="type-cell"><span class="pill peerscale">Peer-scale</span></td><td class="why combined"><ul class="mini-list"><li>Mid-size port city, not a close physical peer.</li><li>A tiered center hierarchy with hard numeric targets, plus a measured 62% first-year jump in proposed housing.</li></ul></td><td class="num" data-value="5.584"><span class="aff-badge aff-4">5.6×</span></td><td class="num" data-value="1.670"><span class="aff-badge aff-2">1.67×</span></td></tr>
+            <tr><td class="city"><a href="/cities/southbend/">South Bend, IN</a></td><td class="type-cell"><span class="pill peerscale">Peer-scale</span></td><td class="why combined"><ul class="mini-list"><li>Smaller legacy city facing population loss — the inverse of Santa Fe's growth pressure.</li><li>A pre-approved infill design catalog — a model for cutting permitting friction.</li></ul></td><td class="num" data-value="2.517"><span class="aff-badge aff-1">2.5×</span></td><td class="num" data-value="0.818"><span class="aff-badge aff-1">0.82×</span></td></tr>
+            <tr><td class="city"><a href="/cities/santabarbara/">Santa Barbara, CA</a></td><td class="type-cell"><span class="pill peerscale">Peer-scale</span></td><td class="why combined"><ul class="mini-list"><li>Historic core, tourism economy, strict design review, high housing costs.</li><li>Closest coastal comparable, with a concrete density formula resolving the character-vs-housing tension.</li></ul></td><td class="num" data-value="14.793"><span class="aff-badge aff-4">14.8×</span></td><td class="num" data-value="5.700"><span class="aff-badge aff-4">5.70×</span></td></tr>
+            <tr><td class="city"><a href="/cities/somerville/">Somerville, MA</a></td><td class="type-cell"><span class="pill peerscale">Peer-scale</span></td><td class="why combined"><ul class="mini-list"><li>Dense inner-urban — not a physical peer.</li><li>The most-cited "state of the art code for a walkable city," tying density to named, mapped areas.</li></ul></td><td class="num" data-value="6.874"><span class="aff-badge aff-4">6.9×</span></td><td class="num" data-value="3.956"><span class="aff-badge aff-4">3.96×</span></td></tr>
+            <tr><td class="city"><a href="/cities/seattle/">Seattle, WA</a></td><td class="type-cell"><span class="pill incentive">Incentive Example</span></td><td class="why combined"><ul class="mini-list"><li>Not chosen for physical similarity — dense Pacific Northwest coastal metro.</li><li>The nation's longest-running, most heavily used property-tax incentive for walkable-center housing.</li></ul></td><td class="num" data-value="7.578"><span class="aff-badge aff-4">7.6×</span></td><td class="num" data-value="2.544"><span class="aff-badge aff-3">2.54×</span></td></tr>
+            <tr><td class="city"><a href="/cities/houston/">Houston, TX</a></td><td class="type-cell"><span class="pill incentive">Incentive Example</span></td><td class="why combined"><ul class="mini-list"><li>Flat, car-dependent, no zoning code — about as different from Santa Fe as a large city gets.</li><li>Best-documented before/after data on minimum-lot-size deregulation — a density and production story, not a walkability one.</li></ul></td><td class="num" data-value="4.286"><span class="aff-badge aff-3">4.3×</span></td><td class="num" data-value="1.131"><span class="aff-badge aff-2">1.13×</span></td></tr>
+            <tr><td class="city"><a href="/cities/sanantonio/">San Antonio, TX</a></td><td class="type-cell"><span class="pill preservation">Preservation Example</span></td><td class="why combined"><ul class="mini-list"><li>Not chosen for physical similarity — far larger and more diverse than Santa Fe.</li><li>A tiered conservation-district system between no protection and full historic-district review.</li></ul></td><td class="num" data-value="3.623"><span class="aff-badge aff-2">3.6×</span></td><td class="num" data-value="1.000"><span class="aff-badge aff-2">1.00×</span></td></tr>
+            <tr><td class="city"><a href="/cities/miami/">Miami, FL</a></td><td class="type-cell"><span class="pill preservation">Preservation Example</span></td><td class="why combined"><ul class="mini-list"><li>Dense coastal metro, tropical climate — not a physical match.</li><li>Extends preservation to recent-past, mid-century commercial architecture, paired with a transfer-of-development-rights incentive.</li></ul></td><td class="num" data-value="8.295"><span class="aff-badge aff-4">8.3×</span></td><td class="num" data-value="2.971"><span class="aff-badge aff-3">2.97×</span></td></tr>
+            <tr><td class="city"><a href="/cities/charleston/">Charleston, SC</a></td><td class="type-cell"><span class="pill preservation">Preservation Example</span></td><td class="why combined"><ul class="mini-list"><li>Coastal peninsula city built around 18th- and 19th-century architecture — a different physical context.</li><li>The first historic-district zoning ordinance in the U.S. — the origin of the design-review-board model.</li></ul></td><td class="num" data-value="5.515"><span class="aff-badge aff-4">5.5×</span></td><td class="num" data-value="2.000"><span class="aff-badge aff-3">2.00×</span></td></tr>
+            <tr><td class="city"><a href="/cities/savannah/">Savannah, GA</a></td><td class="type-cell"><span class="pill preservation">Preservation Example</span></td><td class="why combined"><ul class="mini-list"><li>Coastal Georgia city built around its 18th-century town plan — a different physical context.</li><li>A private, self-renewing revolving fund for preservation finance, alongside historic-district zoning.</li></ul></td><td class="num" data-value="4.356"><span class="aff-badge aff-3">4.4×</span></td><td class="num" data-value="1.112"><span class="aff-badge aff-2">1.11×</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <footer class="page-foot">
+      Twenty of these cities anchor the flagship / reform-durability / peer-scale comparison in <a href="/research/general-plan-reforms/">Effective General Plan Reforms</a>; Seattle and Houston were added for the case studies in <a href="/research/housing-incentives/">Affordable Housing Incentives</a>; San Antonio, Miami, Charleston, and Savannah were added for the case studies in <a href="/research/historic-preservation/">Historic Preservation Approaches</a> (Charlotte, already listed above, carries a historic-preservation section on its own profile page too). See <a href="/states/">By State</a> for the five states referenced in the incentives scan.
+    </footer>
+  </div>
+</BaseLayout>
+
+<script>
+  // Sortable comparison table: click a th.sortable to sort its table's
+  // tbody rows by that column, toggling asc/desc; a second column's click
+  // clears the previous column's indicator. The pinned Santa Fe row stays
+  // put — only `tbody:not(.pinned-body)` rows get re-ordered.
+  document.querySelectorAll('table.compare.cities').forEach((table) => {
+    const headers = Array.from(table.querySelectorAll('th.sortable'));
+    if (!headers.length) return;
+    headers.forEach((th) => {
+      th.addEventListener('click', () => {
+        const dir = th.dataset.dir === 'asc' ? 'desc' : 'asc';
+        headers.forEach((h) => { if (h !== th) h.removeAttribute('data-dir'); });
+        th.dataset.dir = dir;
+        const idx = Array.from(th.parentElement.children).indexOf(th);
+        const type = th.dataset.sortType || 'text';
+        const tbody = table.querySelector('tbody:not(.pinned-body)') || table.querySelector('tbody');
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        rows.sort((a, b) => {
+          const ca = a.children[idx];
+          const cb = b.children[idx];
+          let va, vb;
+          if (type === 'num') {
+            va = parseFloat((ca && ca.dataset.value) || ca?.textContent || '');
+            vb = parseFloat((cb && cb.dataset.value) || cb?.textContent || '');
+            va = Number.isNaN(va) ? -Infinity : va;
+            vb = Number.isNaN(vb) ? -Infinity : vb;
+          } else {
+            va = (ca ? ca.textContent : '').trim().toLowerCase();
+            vb = (cb ? cb.textContent : '').trim().toLowerCase();
+          }
+          const cmp = va < vb ? -1 : va > vb ? 1 : 0;
+          return dir === 'asc' ? cmp : -cmp;
+        });
+        rows.forEach((r) => tbody.appendChild(r));
+      });
+    });
+  });
+</script>

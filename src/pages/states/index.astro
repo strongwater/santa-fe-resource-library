@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="By State" description="Every state referenced in this library, in one place.">
+  <div class="wrap">
+    <header class="page-head">
+      <div class="kicker">Browse by Location</div>
+      <h1 class="page-title">By State</h1>
+      <p class="page-sub">Every state-level program referenced in this library, in one place.</p>
+      <div class="meta-row">
+        <span><b>Compiled</b> August 2026</span>
+        <span><b>States profiled</b> 5</span>
+        <span><b>See also</b> <a href="/cities/">By City</a></span>
+      </div>
+    </header>
+  </div>
+
+  <div class="wrap">
+    <section class="sub" id="bystate-all">
+      <div class="section-head">
+        <div class="section-num">STATE PROGRAMS</div>
+        <h2 class="section-title">Every state referenced in this library</h2>
+        <p class="section-note">California and Massachusetts have their own dedicated profile page. Washington and Minnesota are represented through the city in this scan that builds under their program — Seattle and Minneapolis, respectively. Colorado has no confirmed city-level connection in this library's scan, so it's listed here without a link — see the full case study in <a href="/research/housing-incentives/#ahs-colorado">Affordable Housing Incentives</a>.</p>
+      </div>
+      <div class="table-scroll">
+        <table class="compare cities">
+          <thead>
+            <tr><th>State</th><th>Mechanism</th><th>Why it's here</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="city"><a href="/cities/california/">California</a></td><td class="why">By-right density bonus, statewide ADU laws, SB 35 ministerial streamlining.</td><td class="why">Ties directly to three cities already in this scan — Sacramento, Berkeley, and Santa Barbara — and is the largest single source of incentive-driven housing production in the country.</td></tr>
+            <tr><td class="city"><a href="/cities/massachusetts/">Massachusetts</a></td><td class="why">Chapter 40B comprehensive-permit override, active since 1969.</td><td class="why">The statewide backdrop behind Somerville's housing production, and the model three other states copied.</td></tr>
+            <tr><td class="city"><a href="/cities/seattle/">Washington</a></td><td class="why">Multifamily Tax Exemption (MFTE) — property-tax exemption for new multifamily buildings, RCW 84.14.</td><td class="why">Run by 50+ Washington cities; Seattle, Tacoma, and Spokane are all profiled in this scan under it.</td></tr>
+            <tr><td class="city">Colorado</td><td class="why">Proposition 123 housing fund and Transit-Oriented Communities Infrastructure grants.</td><td class="why">A funding-based approach rather than a zoning override — voter-approved, dedicated tax revenue for jurisdictions that already have the capacity to build.</td></tr>
+            <tr><td class="city"><a href="/cities/minneapolis/">Minnesota</a></td><td class="why">Local Affordable Housing Aid — dedicated sales-tax fund for the seven-county Twin Cities metro.</td><td class="why">Complements Minneapolis's own 4(d) property-tax incentive, also profiled in this scan.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <footer class="page-foot">
+      See <a href="/research/housing-incentives/">Affordable Housing Incentives</a> for the full case study on all five states, including objective results, subjective assessment, and public response for each. See <a href="/cities/">By City</a> for every city profiled in this library.
+    </footer>
+  </div>
+</BaseLayout>
