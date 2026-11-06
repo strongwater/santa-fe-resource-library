@@ -17,6 +17,10 @@ const cities = defineCollection({
     kicker: z.string(),
     // the page-sub line under the title
     pageSub: z.string(),
+    // "Why <city> is in this library" callout — title text plus the raw
+    // HTML of its paragraphs (may contain <strong>/<em>/<a> inline markup)
+    calloutTitle: z.string().optional(),
+    calloutHtml: z.string().optional(),
     // in-page cross-reference links shown under the header
     // (old data-target/data-anchor pairs — see MIGRATION_GUIDE.md)
     xrefs: z

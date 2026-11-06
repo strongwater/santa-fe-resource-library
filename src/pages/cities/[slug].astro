@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { name, kicker, pageSub, xrefs, snapshot, showSantaFeComparison } = entry.data;
+const { name, kicker, pageSub, xrefs, snapshot, showSantaFeComparison, calloutTitle, calloutHtml } = entry.data;
 const { Content } = await render(entry);
 ---
 <BaseLayout title={name} description={pageSub}>
@@ -24,6 +24,13 @@ const { Content } = await render(entry);
     </header>
   </div>
   <div class="wrap">
+    {calloutTitle && (
+      <div class="callout quotecall">
+        <h4>{calloutTitle}</h4>
+        <Fragment set:html={calloutHtml} />
+      </div>
+    )}
+
     {xrefs.length > 0 && (
       <p class="xref-row">
         {xrefs.map((x) => <a href={x.href}>&#8617; {x.label}</a>)}
