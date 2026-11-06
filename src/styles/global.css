@@ -302,6 +302,48 @@
   }
   nav.jump button:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); }
 
+  /* Vertical variant — used by pages with too many sections for one
+     horizontal row (e.g. PDF Library) */
+  nav.jump.jump-vertical {
+    position: static;
+    background: none;
+    backdrop-filter: none;
+    border-bottom: none;
+    margin: 4px 0 26px;
+  }
+  nav.jump.jump-vertical .wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    padding: 8px;
+    overflow: visible;
+    max-width: 300px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--surface-raised);
+    box-shadow: var(--shadow);
+  }
+  nav.jump.jump-vertical a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    background: none;
+    border: none;
+    text-decoration: none;
+    white-space: normal;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  nav.jump.jump-vertical a:hover { background: var(--surface); color: var(--accent-ink); }
+
   section.sub { padding-top: 34px; scroll-margin-top: 60px; }
   section.sub:first-of-type { padding-top: 24px; }
 
