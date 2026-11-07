@@ -8,24 +8,119 @@ function isActive(href: string): boolean {
   return path === href || path.startsWith(href);
 }
 
-const navGroups: { label?: string; links: { href: string; label: string; tag?: string }[] }[] = [
+type Section = { href: string; label: string };
+type Link = { href: string; label: string; tag?: string; sections?: Section[] };
+
+const navGroups: { label?: string; links: Link[] }[] = [
   { links: [{ href: '/', label: 'Overview' }] },
-  { links: [{ href: '/recommendations/', label: 'Recommendations', tag: '5 areas' }] },
+  {
+    links: [
+      {
+        href: '/recommendations/',
+        label: 'Recommendations',
+        tag: '5 areas',
+        sections: [
+          { href: '#rec-scan', label: 'General Plan Reforms' },
+          { href: '#rec-guide', label: 'Plan Language' },
+          { href: '#rec-incentives', label: 'Housing Incentives' },
+          { href: '#rec-ldc', label: 'Land Development Code' },
+          { href: '#rec-historic', label: 'Historic Preservation' },
+        ],
+      },
+    ],
+  },
   {
     label: 'Local & State Context',
     links: [
-      { href: '/local/santa-fe-today/', label: 'Santa Fe Today', tag: 'Assessment Report' },
-      { href: '/local/nm-housing-policy/', label: 'New Mexico & Local Housing Policy', tag: '4 sources' },
+      {
+        href: '/local/santa-fe-today/',
+        label: 'Where the Updates Stand',
+        tag: 'Status',
+        sections: [
+          { href: '#status-gp', label: 'General Plan Update' },
+          { href: '#status-ldc', label: 'Land Development Code' },
+          { href: '#status-drm', label: 'Development Review' },
+        ],
+      },
+      {
+        href: '/local/nm-housing-policy/',
+        label: 'New Mexico & Local Housing Policy',
+        tag: '4 sources',
+        sections: [
+          { href: '#nmhp-state', label: 'NM Housing Strategy' },
+          { href: '#nmhp-city', label: "Santa Fe's Own Plan" },
+          { href: '#nmhp-county', label: "Santa Fe County's Plan" },
+          { href: '#nmhp-permitting', label: 'Permitting Reform (independent)' },
+        ],
+      },
     ],
   },
   {
     label: 'Comparative Research',
     links: [
-      { href: '/research/general-plan-reforms/', label: 'Effective General Plan Reforms', tag: '20 cities' },
-      { href: '/research/plan-language/', label: 'General Plan Language Comparisons', tag: '20 plans' },
-      { href: '/research/housing-incentives/', label: 'Affordable Housing Incentives', tag: '11 programs' },
+      {
+        href: '/research/general-plan-reforms/',
+        label: 'Effective General Plan Reforms',
+        tag: '20 cities',
+        sections: [
+          { href: '#glance', label: 'At a glance' },
+          { href: '#flagship', label: 'Flagship reforms' },
+          { href: '#cautionary', label: 'Reform durability' },
+          { href: '#peer', label: 'Peer-scale cities' },
+          { href: '#pcs-minneapolis', label: 'Minneapolis, Minnesota' },
+          { href: '#pcs-portland', label: 'Portland, Oregon' },
+          { href: '#pcs-sacramento', label: 'Sacramento, California' },
+          { href: '#pcs-charlotte', label: 'Charlotte, North Carolina' },
+          { href: '#pcs-austin', label: 'Austin, Texas' },
+          { href: '#pcs-berkeley', label: 'Berkeley, California' },
+          { href: '#pcs-cincinnati', label: 'Cincinnati, Ohio' },
+          { href: '#pcs-columbus', label: 'Columbus, Ohio' },
+          { href: '#pcs-gainesville', label: 'Gainesville, Florida' },
+          { href: '#pcs-arlington', label: 'Arlington County, Virginia' },
+          { href: '#pcs-alexandria', label: 'Alexandria, Virginia' },
+          { href: '#pcs-boulder', label: 'Boulder, Colorado' },
+          { href: '#pcs-missoula', label: 'Missoula, Montana' },
+          { href: '#pcs-bend', label: 'Bend, Oregon' },
+          { href: '#pcs-flagstaff', label: 'Flagstaff, Arizona' },
+          { href: '#pcs-spokane', label: 'Spokane, Washington' },
+          { href: '#pcs-tacoma', label: 'Tacoma, Washington' },
+          { href: '#pcs-southbend', label: 'South Bend, Indiana' },
+          { href: '#pcs-santabarbara', label: 'Santa Barbara, California' },
+          { href: '#pcs-somerville', label: 'Somerville, Massachusetts' },
+        ],
+      },
+      {
+        href: '/research/plan-language/',
+        label: 'General Plan Language Comparisons',
+        tag: '20 plans',
+        sections: [
+          { href: '#g-context', label: 'The opportunity' },
+          { href: '#g-plans', label: 'The twenty plans' },
+        ],
+      },
+      {
+        href: '/research/housing-incentives/',
+        label: 'Affordable Housing Incentives',
+        tag: '11 programs',
+        sections: [
+          { href: '#ahi-state', label: 'State programs' },
+          { href: '#ahi-city', label: 'City programs' },
+        ],
+      },
       { href: '/research/ldc-concepts/', label: 'Land Development Code Concepts', tag: '7 concepts' },
-      { href: '/research/historic-preservation/', label: 'Historic Preservation Approaches', tag: '8 cities' },
+      {
+        href: '/research/historic-preservation/',
+        label: 'Historic Preservation Approaches',
+        tag: '8 cities',
+        sections: [
+          { href: '#hp-findings', label: "Santa Fe's own findings" },
+          { href: '#hp-survey-group', label: 'Survey & documentation' },
+          { href: '#hp-tiers-group', label: 'Protection tiers & authority' },
+          { href: '#hp-displacement-group', label: 'Preservation & displacement' },
+          { href: '#hp-community-group', label: 'Community voice' },
+          { href: '#hp-standards-group', label: 'SHPO / CLG standards' },
+        ],
+      },
     ],
   },
   {
@@ -37,7 +132,25 @@ const navGroups: { label?: string; links: { href: string; label: string; tag?: s
   },
   {
     label: 'Source Documents',
-    links: [{ href: '/pdf-library/', label: 'PDF Library', tag: '90+ links' }],
+    links: [
+      {
+        href: '/pdf-library/',
+        label: 'PDF Library',
+        tag: '90+ links',
+        sections: [
+          { href: '#pdf-1999gp', label: '1999 General Plan' },
+          { href: '#pdf-forward', label: 'GP Update' },
+          { href: '#pdf-assessment', label: 'Assessment Report & Vision' },
+          { href: '#pdf-nmhousing', label: 'NM & Local Housing Policy' },
+          { href: '#pdf-streets', label: 'Streets & Transportation' },
+          { href: '#pdf-peerplans', label: 'Peer Comprehensive Plans' },
+          { href: '#pdf-ahistate', label: 'Incentives — State' },
+          { href: '#pdf-ahicity', label: 'Incentives — City' },
+          { href: '#pdf-historic', label: 'Historic Preservation' },
+          { href: '#pdf-supporting', label: 'Supporting Docs' },
+        ],
+      },
+    ],
   },
 ];
 ---
@@ -50,15 +163,45 @@ const navGroups: { label?: string; links: { href: string; label: string; tag?: s
   {navGroups.map((group) => (
     <div class="nav-group">
       {group.label && <div class="nav-label">{group.label}</div>}
-      {group.links.map((link) => (
-        <a
-          class:list={['nav-link', { active: isActive(link.href) }]}
-          href={link.href}
-          aria-current={isActive(link.href) ? 'page' : undefined}
-        >
-          {link.label} {link.tag && <span class="tag">{link.tag}</span>}
-        </a>
-      ))}
+      {group.links.map((link) => {
+        const active = isActive(link.href);
+        const sections = link.sections ?? [];
+        const hasSections = sections.length > 0;
+        return (
+          <div class="nav-item">
+            <div class="nav-row">
+              {hasSections ? (
+                <button
+                  class="nav-caret"
+                  type="button"
+                  aria-expanded={active ? 'true' : 'false'}
+                  aria-label={`Toggle sections for ${link.label}`}
+                >
+                  <svg viewBox="0 0 16 16" width="10" height="10" aria-hidden="true">
+                    <path d="M4 2 L12 8 L4 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              ) : (
+                <span class="nav-caret-spacer" aria-hidden="true"></span>
+              )}
+              <a
+                class:list={['nav-link', { active }]}
+                href={link.href}
+                aria-current={active ? 'page' : undefined}
+              >
+                {link.label}
+              </a>
+            </div>
+            {hasSections && (
+              <div class="nav-sections" data-open={active ? 'true' : 'false'}>
+                {sections.map((s) => (
+                  <a class="nav-sublink" href={`${link.href}${s.href}`}>{s.label}</a>
+                ))}
+              </div>
+            )}
+          </div>
+        );
+      })}
     </div>
   ))}
 

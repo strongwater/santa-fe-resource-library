@@ -122,7 +122,7 @@
   .nav-group { margin-bottom: 6px; }
   .nav-label {
     font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: 10.5px;
+    font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -134,11 +134,12 @@
     align-items: baseline;
     justify-content: space-between;
     gap: 8px;
-    padding: 9px 10px;
+    padding: 8px 10px;
     border-radius: 7px;
     color: var(--ink-muted);
     text-decoration: none;
-    font-size: 0.93rem;
+    font-size: 0.82rem;
+    line-height: 1.35;
     font-weight: 500;
     cursor: pointer;
     border: none;
@@ -158,6 +159,51 @@
   .nav-link.active .tag { color: var(--accent-ink); opacity: 0.7; }
   .nav-link.ghost { color: var(--ink-faint); font-style: italic; cursor: default; }
   .nav-link.ghost:hover { background: none; color: var(--ink-faint); }
+
+  .nav-item { display: flex; flex-direction: column; }
+  .nav-row { display: flex; align-items: flex-start; gap: 2px; }
+  .nav-row .nav-link { flex: 1 1 auto; min-width: 0; align-items: flex-start; }
+  .nav-caret,
+  .nav-caret-spacer {
+    flex: 0 0 auto;
+    width: 22px;
+    height: 22px;
+    margin-top: 7px;
+  }
+  .nav-caret {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    color: var(--ink-faint);
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 0;
+  }
+  .nav-caret:hover { background: var(--surface); color: var(--ink-muted); }
+  .nav-caret svg { transition: transform 0.15s ease; }
+  .nav-caret[aria-expanded="true"] svg { transform: rotate(90deg); }
+
+  .nav-sections {
+    display: none;
+    flex-direction: column;
+    margin: 2px 0 4px;
+    margin-left: 26px;
+    padding-left: 14px;
+    border-left: 1px solid var(--line);
+  }
+  .nav-sections[data-open="true"] { display: flex; }
+  .nav-sublink {
+    padding: 5px 8px;
+    border-radius: 6px;
+    color: var(--ink-faint);
+    text-decoration: none;
+    font-size: 0.74rem;
+    line-height: 1.35;
+    display: block;
+  }
+  .nav-sublink:hover { background: var(--surface); color: var(--accent-ink); }
 
   .sidebar-foot {
     margin-top: 20px;
@@ -266,6 +312,9 @@
   }
 
   /* ================= In-page jump nav ================= */
+  /* Tab strip, not buttons: flat, compact, wraps to extra rows for
+     pages with many sections, and highlights whichever tab's section
+     is currently scrolled into view (see BaseLayout's scroll-spy). */
   nav.jump {
     position: sticky;
     top: 0;
@@ -276,73 +325,32 @@
     margin: 0 0 8px;
   }
   nav.jump .wrap {
-    padding: 10px 24px;
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-  nav.jump .wrap::-webkit-scrollbar { display: none; }
-  nav.jump button {
-    flex: 0 0 auto;
-    font-family: "IBM Plex Mono", ui-monospace, monospace;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--accent-ink);
-    background: var(--accent-tint);
-    border: 1px solid var(--line-strong);
-    border-radius: 6px;
-    text-decoration: none;
-    padding: 9px 14px;
-    white-space: nowrap;
-    cursor: pointer;
-    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-  }
-  nav.jump button:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-
-  /* Wrapping variant — used by pages with too many sections for one
-     horizontal row (e.g. PDF Library). Chips keep their own text on one
-     line (no mid-word breaks) and the row wraps as a whole onto a
-     second line instead of squeezing or stacking into a tall sidebar. */
-  nav.jump.jump-wrap {
-    position: static;
-    background: none;
-    backdrop-filter: none;
-    border-bottom: none;
-    margin: 4px 0 28px;
-  }
-  nav.jump.jump-wrap .wrap {
+    padding: 0 24px;
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    padding: 0;
-    overflow: visible;
-    max-width: 920px;
-    margin: 0;
-    border: none;
-    background: none;
-    box-shadow: none;
+    gap: 0 4px;
   }
-  nav.jump.jump-wrap a {
-    display: inline-block;
+  nav.jump a {
     flex: 0 0 auto;
-    font-family: "Source Sans 3", sans-serif;
-    font-size: 0.85rem;
+    display: inline-block;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 11px;
     font-weight: 600;
-    letter-spacing: normal;
-    text-transform: none;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
     color: var(--ink-muted);
-    background: var(--surface-raised);
-    border: 1px solid var(--line);
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
     text-decoration: none;
+    padding: 10px 8px 8px;
+    margin-bottom: -1px;
     white-space: nowrap;
-    padding: 7px 14px;
-    border-radius: 999px;
-    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease;
   }
-  nav.jump.jump-wrap a:hover { background: var(--surface); color: var(--accent-ink); border-color: var(--accent); }
+  nav.jump a:hover { color: var(--accent-ink); }
+  nav.jump a.active { color: var(--accent-ink); border-bottom-color: var(--accent); }
 
   section.sub { padding-top: 34px; scroll-margin-top: 60px; }
   section.sub:first-of-type { padding-top: 24px; }
@@ -993,8 +1001,54 @@
 
   /* ================= Incentive case-study cards ================= */
   .case-study-list { display: flex; flex-direction: column; gap: 14px; }
+  /* Process status tracker — vertical step list with a connecting
+     spine, used on "Where the Updates Stand" to show where a
+     multi-step city process currently sits. */
+  .steps { display: flex; flex-direction: column; position: relative; }
+  .step { display: flex; gap: 14px; padding: 2px 0 20px 2px; position: relative; }
+  .step:last-child { padding-bottom: 2px; }
+  .step-marker {
+    flex: 0 0 auto;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    margin-top: 4px;
+    background: var(--surface);
+    border: 2px solid var(--line-strong);
+    position: relative;
+    z-index: 1;
+  }
+  .step:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 18px;
+    bottom: -2px;
+    width: 2px;
+    background: var(--line);
+  }
+  .step.done .step-marker { background: var(--ink-faint); border-color: var(--ink-faint); }
+  .step.active .step-marker { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-tint); }
+  .step.upcoming .step-marker { background: var(--surface); border-color: var(--line); }
+  .step-body { flex: 1 1 auto; min-width: 0; }
+  .step-top { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+  .step-top h3 { margin: 0; font-size: 0.98rem; }
+  .step.upcoming .step-top h3, .step.upcoming p { color: var(--ink-faint); }
+  .step-state {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    white-space: nowrap;
+  }
+  .step.active .step-state { color: var(--accent-ink); }
+  .step p { margin: 4px 0 0; }
+
   .case-study { scroll-margin-top: 60px; }
   .case-study .card-top { align-items: flex-start; }
+  .case-study .cs-tag.gov { background: var(--accent-tint); border-color: var(--accent); color: var(--accent-ink); }
+  .case-study .cs-tag.research { background: var(--surface); border: 1px dashed var(--line-strong); color: var(--ink-muted); font-style: italic; }
   .case-study .cs-tag {
     flex: 0 0 auto;
     font-family: "IBM Plex Mono", ui-monospace, monospace;

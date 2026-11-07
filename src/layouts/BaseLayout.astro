@@ -56,6 +56,53 @@ const { title, description = "A working library of research supporting Santa Fe'
         navToggle?.setAttribute('aria-expanded', 'false');
       });
     });
+
+    // Sidebar carets: open/close a page's jump-nav sections without
+    // navigating or closing the mobile sidebar.
+    sidebar?.querySelectorAll('.nav-caret').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        const sections = btn.closest('.nav-item')?.querySelector('.nav-sections');
+        sections?.setAttribute('data-open', String(!expanded));
+      });
+    });
+
+    // Scroll-spy: highlight whichever jump-nav tab corresponds to the
+    // section currently scrolled into view.
+    document.querySelectorAll('nav.jump').forEach((nav) => {
+      const links = Array.from(nav.querySelectorAll('a[href^="#"]'));
+      const targets = links
+        .map((link) => ({
+          link,
+          el: document.getElementById(link.getAttribute('href').slice(1)),
+        }))
+        .filter((t) => t.el);
+      if (!targets.length) return;
+
+      const setActive = (id) => {
+        links.forEach((l) => {
+          l.classList.toggle('active', l.getAttribute('href') === `#${id}`);
+        });
+      };
+
+      // Default to the first tab until scrolling tells us otherwise.
+      setActive(targets[0].el.id);
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const visible = entries.filter((e) => e.isIntersecting);
+          if (!visible.length) return;
+          visible.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+          setActive(visible[0].target.id);
+        },
+        { rootMargin: '-15% 0px -75% 0px', threshold: 0 }
+      );
+
+      targets.forEach((t) => observer.observe(t.el));
+    });
   </script>
 </body>
 </html>
